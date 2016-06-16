@@ -4,6 +4,7 @@ First we need a recent version of the OpenSC framework. Most linux distributions
 
 In the HOWTO we suppose that you are going to install into the folder /opt/faircoin.
 ```
+sudo apt-get install -y build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev git libdb5.3-dev libdb5.3++-dev libqt4-core libqt4-gui libqt4-dev libqrencode-dev libprotobuf-dev protobuf-compiler libevent-dev libpcsclite-dev
 mkdir /opt/faircoin && cd /opt/faircoin
 git clone https://github.com/OpenSC/OpenSC.git
 cd OpenSC
