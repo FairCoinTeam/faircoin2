@@ -15,7 +15,7 @@ apps:
       XDG_DATA_DIRS: $SNAP_USER_DATA:$SNAP/usr/share:$XDG_DATA_DIRS
     aliases: [faircoind]
   qt:
-    command: desktop-launch bitcoin-qt
+    command: desktop-launch faircoin-qt
     plugs: [network, network-bind, unity7]
     aliases: [faircoin-qt]
   cli:
