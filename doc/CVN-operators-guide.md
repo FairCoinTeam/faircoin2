@@ -37,6 +37,11 @@ minicom -D /dev/ttyACM0
 
 First type ```HELP``` (all uppercase!) and press enter. This will display a list of all commands.
 
+If you cant access to the device with your user but can access with root, make sure your user is in the dialout group:
+```
+sudo addgroup <youusername> dialout
+```
+
 ### 2.3 The first start of your node
 Create a configuration file in the data directory of FairCoin and copy-and-paste the following command sequence in your terminal:
 
@@ -64,6 +69,16 @@ When it is finished, quit the wallet software.
 You start your CVN with the following command. In terminal or by pressing Alt+F2 on your desktop:
 ```
 /opt/faircoin/faircoin2/src/qt/faircoin-qt
+```
+
+It's more secure not using the cvn as the wallet recollecting the fees, you can add to the faircoin.conf file:
+```
+cvnfeeaddress=<yourfaircoinaddress>
+```
+
+The fees will be collected in that address that does not need to belong to the CVN wallet. Since is not needed the wallet functionally, is better to start the CVN without it:
+```
+/opt/faircoin/faircoin2/src/qt/faircoin-qt --disable-wallet
 ```
 
 Now your CVN is up and running and ready to be activated by the chain administrators.
