@@ -1,0 +1,13 @@
+diff --git a/src/util.cpp b/src/util.cpp
+index 57b0419..dd21329 100644
+--- a/src/util.cpp
++++ b/src/util.cpp
+@@ -467,7 +467,7 @@ boost::filesystem::path GetDefaultDataDir()
+     return GetSpecialFolderPath(CSIDL_APPDATA) / "faircoin2";
+ #else
+     fs::path pathRet;
+-    char* pszHome = getenv("HOME");
++    char* pszHome = getenv("SNAP_USER_COMMON");
+     if (pszHome == NULL || strlen(pszHome) == 0)
+         pathRet = fs::path("/");
+     else
